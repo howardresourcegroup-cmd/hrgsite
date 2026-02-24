@@ -11,18 +11,16 @@ if (burger && nav) {
   });
 }
 
-// Demo form handling (no backend). Replace with Formspree / your endpoint.
-function wireForm(formId, statusId){
+// Lightweight UX: show a "Sending..." status, but DO NOT prevent submission.
+function setSending(formId, statusId) {
   const form = document.getElementById(formId);
   const status = document.getElementById(statusId);
-  if (!form) return;
+  if (!form || !status) return;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (status) status.textContent = "Sent! (Demo mode) — connect Formspree or your backend to receive messages.";
-    form.reset();
+  form.addEventListener("submit", () => {
+    status.textContent = "Sending…";
   });
 }
 
-wireForm("quickForm", "formStatus");
-wireForm("contactForm", "contactStatus");
+setSending("quickForm", "formStatus");
+setSending("contactForm", "contactStatus");
