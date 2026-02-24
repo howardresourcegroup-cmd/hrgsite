@@ -1,32 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Support Lead Funnel</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Howard Resource Group | Technology Consults in Dawsonville, GA</title>
+  <meta name="description" content="Howard Resource Group provides technology consults, PC builds, Wi-Fi/network help, device setup, and troubleshooting in Dawsonville, GA and North Georgia." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Howard Resource Group | Technology Consults" />
+  <meta property="og:description" content="Local tech help in Dawsonville, GA. Fast, friendly, and done right." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Professional Tech Support in Dawsonville, Georgia</h1>
-    </header>
-    <main>
-        <h2>Need Help with Computer Troubleshooting?</h2>
-        <p>Fill out the form below to get in touch with our expert support team.</p>
-        <form action="https://formspree.io/f/xkgqpggr" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-    <footer>
-        <p>&copy; 2026 Tech Support Services, Dawsonville, GA</p>
-    </footer>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Howard Resource Group Home">
+      <span class="brand__mark">HRG</span>
+      <span class="brand__text">
+        <span class="brand__name">Howard Resource Group</span>
+        <span class="brand__tag">Technology Consults • Dawsonville, GA</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn btn--sm" href="#contact">Get Help</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="pill">Local • On-site or Remote • Fast turnaround</p>
+          <h1>Technology Consults in <span class="accent">Dawsonville</span> — we do it all.</h1>
+          <p class="lead">
+            From Wi-Fi issues and device setup to custom PCs and small-business tech cleanups —
+            HRG gets you back to smooth, secure, and simple.
+          </p>
+
+          <div class="cta">
+            <a class="btn" href="#contact">Request a Consult</a>
+            <a class="btn btn--ghost" href="#services">See Services</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <span class="trust__big">Dawsonville</span>
+              <span class="trust__small">Local service</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__big">On-site</span>
+              <span class="trust__small">Home & business</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__big">Remote</span>
+              <span class="trust__small">When possible</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card card--glass">
+            <h2>Quick Help</h2>
+            <p class="muted">Tell us what’s going on — we’ll reply fast.</p>
+
+            <form class="form" id="quickForm">
+              <label>
+                Name
+                <input name="name" placeholder="Your name" autocomplete="name" required />
+              </label>
+
+              <label>
+                Phone or Email
+                <input name="contact" placeholder="(706) ___-____ or you@email.com" required />
+              </label>
+
+              <label>
+                What do you need help with?
+                <textarea name="message" rows="4" placeholder="Wi-Fi drops, printer won’t connect, new PC setup, etc." required></textarea>
+              </label>
+
+              <button class="btn btn--full" type="submit">Send Request</button>
+
+              <p class="tiny muted">
+                Prefer call/text?
+                <a href="tel:+17065315161">Call (706) 531-5161</a>
+              </p>
+
+              <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2>What we handle</h2>
+          <p class="muted">Clear answers, clean setups, and reliable performance.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <h3>Home Tech Support</h3>
+            <p class="muted">Wi-Fi, smart TVs, printers, phones, laptops, backups, cleanup.</p>
+            <ul class="list">
+              <li>Network & router optimization</li>
+              <li>Device setup & sync</li>
+              <li>Speed + stability fixes</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Small Business Tech</h3>
+            <p class="muted">Reliable workstations, shared drives, security basics, and organization.</p>
+            <ul class="list">
+              <li>Office setup & cable management</li>
+              <li>Accounts, permissions, and backups</li>
+              <li>Wi-Fi coverage improvements</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Custom PCs & Upgrades</h3>
+            <p class="muted">Gaming, creator rigs, or simple “it just works” builds.</p>
+            <ul class="list">
+              <li>Part selection + build</li>
+              <li>Windows setup & drivers</li>
+              <li>Performance tuning</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Security & Recovery</h3>
+            <p class="muted">Safer passwords, safer browsing, and data recovery when possible.</p>
+            <ul class="list">
+              <li>Malware cleanup</li>
+              <li>Account hardening</li>
+              <li>Backup strategy</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Consulting & Planning</h3>
+            <p class="muted">Not sure what to buy or how to set it up? We’ll design the plan.</p>
+            <ul class="list">
+              <li>Home network planning</li>
+              <li>New device recommendations</li>
+              <li>Upgrade roadmaps</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Setup Days</h3>
+            <p class="muted">Moving? New office? New home? We’ll set everything up right.</p>
+            <ul class="list">
+              <li>Wi-Fi + devices</li>
+              <li>Streaming + smart home</li>
+              <li>Clean, labeled organization</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2>Simple pricing</h2>
+          <p class="muted">No surprises. We’ll confirm before we do anything big.</p>
+        </div>
+
+        <div class="grid pricing">
+          <div class="card card--highlight">
+            <h3>Diagnostics</h3>
+            <p class="price">$50</p>
+            <p class="muted">We identify the issue and outline the best fix.</p>
+            <ul class="list">
+              <li>Device + network check</li>
+              <li>Clear plan + estimate</li>
+              <li>Applies toward service (optional)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Service</h3>
+            <p class="price">$40<span class="price__unit">/hr</span></p>
+            <p class="muted">On-site or remote (when possible).</p>
+            <ul class="list">
+              <li>Wi-Fi stability & speed</li>
+              <li>Printer / device setup</li>
+              <li>Tune-ups + cleanup</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Custom PC Build</h3>
+            <p class="price">Quote</p>
+            <p class="muted">We tailor it to your budget + goals.</p>
+            <ul class="list">
+              <li>Parts list + sourcing help</li>
+              <li>Build + stress test</li>
+              <li>Setup + optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="tiny muted">
+          Travel/service area: Dawsonville + nearby North Georgia. If you’re outside the area, we’ll let you know upfront.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <h2>How it works</h2>
+          <p class="muted">A calm, predictable process — no tech chaos.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div>
+              <h3>Tell us the problem</h3>
+              <p class="muted">Use the form, call, or text. Include what device + what you’re seeing.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div>
+              <h3>We diagnose & plan</h3>
+              <p class="muted">We confirm the plan and cost before moving forward.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div>
+              <h3>We fix it & optimize</h3>
+              <p class="muted">We clean it up, make it stable, and show you what changed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <h2>Local-first service</h2>
+          <p class="muted">We’re building HRG around trust, clarity, and real results.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <p class="quote">“Finally… someone explained it in normal words and fixed it the same day.”</p>
+            <p class="tiny muted">— Home client, Dawson County</p>
+          </article>
+          <article class="card">
+            <p class="quote">“Our Wi-Fi stopped dropping. Printers work. Everything feels organized.”</p>
+            <p class="tiny muted">— Small office setup</p>
+          </article>
+          <article class="card">
+            <p class="quote">“New PC runs perfectly. Clean build, great temps, and it’s FAST.”</p>
+            <p class="tiny muted">— Gaming build client</p>
+          </article>
+        </div>
+
+        <p class="tiny muted">
+          Want these to be real Google reviews? Add your Google Business link later and we’ll wire it in.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2>Get help today</h2>
+            <p class="muted">
+              Based in Dawsonville. Serving North Georgia. On-site or remote when possible.
+            </p>
+
+            <div class="contact__chips">
+              <a class="chip" href="tel:+17065315161">📞 Call: (706) 531-5161</a>
+              <a class="chip" href="mailto:howardresourcegroup@gmail.com">✉️ Email: howardresourcegroup@gmail.com</a>
+              <a class="chip" href="#top">⬆️ Back to top</a>
+            </div>
+
+            <div class="fineprint">
+              <p class="tiny muted">
+                Hours: Mon–Fri 9am–5pm (adjust anytime). Emergency availability by request.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Request a consult</h3>
+            <p class="muted">We’ll respond with next steps.</p>
+
+            <!-- Replace action with Formspree or your backend endpoint -->
+            <form class="form" id="contactForm">
+              <label>
+                Name
+                <input name="name" required />
+              </label>
+              <label>
+                Phone
+                <input name="phone" inputmode="tel" />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" />
+              </label>
+              <label>
+                Service needed
+                <select name="service" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Home Tech Support</option>
+                  <option>Small Business Tech</option>
+                  <option>Custom PC Build</option>
+                  <option>Security & Recovery</option>
+                  <option>Consulting / Planning</option>
+                  <option>Setup Day</option>
+                </select>
+              </label>
+              <label>
+                Details
+                <textarea name="details" rows="5" required></textarea>
+              </label>
+
+              <button class="btn btn--full" type="submit">Submit</button>
+              <p class="tiny muted" id="contactStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p class="tiny muted">© <span id="year"></span> Howard Resource Group • Dawsonville, GA</p>
+      <p class="tiny muted">Technology Consults • PC Builds • Support • Networks</p>
+    </div>
+  </footer>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Howard Resource Group",
+    "description": "Technology consults, PC builds, Wi-Fi/network support, device setup, and troubleshooting in Dawsonville, GA and North Georgia.",
+    "areaServed": "Dawsonville, GA",
+    "telephone": "+1-706-531-5161",
+    "email": "howardresourcegroup@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dawsonville",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
