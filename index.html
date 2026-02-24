@@ -78,7 +78,9 @@
             <h2>Quick Help</h2>
             <p class="muted">Tell us what’s going on — we’ll reply fast.</p>
 
-            <form class="form" id="quickForm">
+            <form class="form" id="quickForm" action="https://formspree.io/f/xkgqpggr" method="POST">
+  <input type="hidden" name="form_name" value="Quick Help" />
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
               <label>
                 Name
                 <input name="name" placeholder="Your name" autocomplete="name" required />
@@ -320,7 +322,9 @@
             <p class="muted">We’ll respond with next steps.</p>
 
             <!-- Replace action with Formspree or your backend endpoint -->
-            <form class="form" id="contactForm">
+            <form class="form" id="contactForm" action="https://formspree.io/f/xkgqpggr" method="POST">
+  <input type="hidden" name="form_name" value="Request a Consult" />
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
               <label>
                 Name
                 <input name="name" required />
