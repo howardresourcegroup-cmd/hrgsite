@@ -135,7 +135,7 @@ em {
 
 .hero{
   position:relative;
-  padding: 100px 0 60px;
+  padding: 120px 0 80px;
   overflow:hidden;
 }
 .hero::before{
@@ -147,7 +147,21 @@ em {
   transform: rotate(25deg);
   z-index:0;
 }
-.hero__copy{position:relative; z-index:1;}
+.hero__copy{position:relative; z-index:1; max-width:800px;}
+.hero h1{font-size:64px; line-height:1.05;}
+.hero .lead{font-size:18px; margin-top: 16px;}
+.hero__graphic{
+  position:absolute;
+  right: 5%; bottom: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, rgba(124,247,255,.1), transparent 70%);
+  transform: translateZ(0) rotate(15deg);
+  opacity:.6;
+  animation: heroShift 12s infinite alternate;
+  pointer-events:none;
+  z-index:0;
+}
 
 .hero__bg{
   position:absolute;
