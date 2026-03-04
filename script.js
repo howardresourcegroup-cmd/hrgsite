@@ -36,6 +36,7 @@ function setupFormFeedback(formId, statusId) {
 
 setupFormFeedback("quickForm", "formStatus");
 setupFormFeedback("contactForm", "contactStatus");
+setupFormFeedback("surveyForm", "surveyStatus");
 
 // Highlight active page in navigation
 (function(){
@@ -81,3 +82,34 @@ if (tabButtons.length) {
     });
   });
 }
+
+// survey workflow
+(function(){
+  const start = document.getElementById('startSurvey');
+  const container = document.getElementById('surveyContainer');
+  if(!start || !container) return;
+
+  const steps = Array.from(container.querySelectorAll('.survey-step'));
+  let index = 0;
+
+  const showStep = i => {
+    steps.forEach((s,idx)=> s.classList.toggle('hidden', idx!==i));
+    document.getElementById('surveyBack').style.display = i>0 ? 'inline-flex' : 'none';
+    document.getElementById('surveyNext').style.display = i < steps.length-1 ? 'inline-flex' : 'none';
+  };
+
+  start.addEventListener('click', () => {
+    container.classList.remove('hidden');
+    container.scrollIntoView({behavior:'smooth', block:'start'});
+    showStep(0);
+  });
+
+  document.getElementById('surveyNext').addEventListener('click', () => {
+    if(index < steps.length-1){ index++; showStep(index); }
+  });
+  document.getElementById('surveyBack').addEventListener('click', () => {
+    if(index>0){ index--; showStep(index); }
+  });
+
+})();
+
