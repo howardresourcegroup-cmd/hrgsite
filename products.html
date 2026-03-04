@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <title>Howard Resource Group | Custom PCs</title>
+  <meta name="description" content="Explore our lineup of handcrafted gaming, workstation and professional systems." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="Howard Resource Group Home">
+      <span class="brand__mark">HRG</span>
+      <span class="brand__text">
+        <span class="brand__name">Howard Resource Group</span>
+        <span class="brand__tag">Premium PC • Consulting • Dawsonville, GA</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="why.html">Why HRG</a>
+      <a href="products.html">PCs</a>
+      <a href="process.html">Process</a>
+      <a href="reviews.html">Reviews</a>
+      <a class="btn btn--sm" href="contact.html">Order Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- PRODUCTS -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section__head">
+          <h2>Custom PCs for Every Need</h2>
+          <p class="muted">Handcrafted systems with premium components. Use the tabs below to explore.</p>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-target="gaming">Gaming</button>
+          <button class="tab-btn" data-target="workstation">Workstation</button>
+          <button class="tab-btn" data-target="professional">Professional</button>
+        </div>
+
+        <div class="tab-content" id="gaming">
+          <article class="card card--highlight">
+            <h3>🎮 Gaming PCs</h3>
+            <p class="muted">Dominate your games with high-end GPUs, fast CPUs, and liquid cooling for maximum performance.</p>
+            <div class="specs">
+              <strong>Starting at $1,200</strong>
+              <ul class="list">
+                <li>RTX 4070/4080 GPU</li>
+                <li>Intel i7-13700K / Ryzen 7 7800X3D</li>
+                <li>32GB DDR5 RAM</li>
+                <li>1TB NVMe SSD</li>
+                <li>Custom RGB lighting</li>
+                <li>240mm AIO cooling</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-content hidden" id="workstation">
+          <article class="card">
+            <h3>💼 Workstation PCs</h3>
+            <p class="muted">Perfect for creators, developers, and content makers. Multitask like a pro with workstation-grade components.</p>
+            <div class="specs">
+              <strong>Starting at $1,800</strong>
+              <ul class="list">
+                <li>RTX 4070 Ti GPU</li>
+                <li>Intel i9-13900K / Ryzen 9 7950X</li>
+                <li>64GB DDR5 RAM</li>
+                <li>2TB NVMe SSD + 4TB HDD</li>
+                <li>Professional-grade cooling</li>
+                <li>Thunderbolt 4 ports</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-content hidden" id="professional">
+          <article class="card">
+            <h3>🏢 Professional Systems</h3>
+            <p class="muted">Reliable, secure systems for business use. Built for productivity, security, and longevity.</p>
+            <div class="specs">
+              <strong>Starting at $900</strong>
+              <ul class="list">
+                <li>RTX 4060 GPU</li>
+                <li>Intel i5-13600K / Ryzen 5 7600</li>
+                <li>32GB DDR5 RAM</li>
+                <li>1TB NVMe SSD</li>
+                <li>Enterprise-grade security</li>
+                <li>5-year warranty</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="tiny muted" style="text-align: center; margin-top: 24px;">
+          All systems include Windows 11 Pro, 1-year warranty, and free setup. Custom configurations available.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p class="tiny muted">© <span id="year"></span> Howard Resource Group • Dawsonville, GA</p>
+      <p class="tiny muted">Custom Gaming PCs • Workstation Builds • Professional Systems</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

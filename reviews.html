@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <title>Reviews | HRG</title>
+  <meta name="description" content="Read what clients say about working with Howard Resource Group." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="Howard Resource Group Home">
+      <span class="brand__mark">HRG</span>
+      <span class="brand__text">
+        <span class="brand__name">Howard Resource Group</span>
+        <span class="brand__tag">Premium PC • Consulting • Dawsonville, GA</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="why.html">Why HRG</a>
+      <a href="products.html">PCs</a>
+      <a href="process.html">Process</a>
+      <a href="reviews.html">Reviews</a>
+      <a class="btn btn--sm" href="contact.html">Order Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <h2>What clients say</h2>
+          <p class="muted">Building HRG on trust, honesty, and real results.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <p class="quote">"Finally… someone explained it in normal words and fixed it fast. And it stayed fixed."</p>
+            <p class="tiny muted">— Home client, Dawson County</p>
+          </article>
+          <article class="card">
+            <p class="quote">"The build quality is insane. Every cable hidden, perfect airflow, and it's SILENT. Just wow."</p>
+            <p class="tiny muted">— Gaming PC client</p>
+          </article>
+          <article class="card">
+            <p class="quote">"We finally understand our system. He made it work the way we needed it to work."</p>
+            <p class="tiny muted">— Small office setup</p>
+          </article>
+          <article class="card">
+            <p class="quote">"Not just fast—he cared about getting it right. You can tell the difference."</p>
+            <p class="tiny muted">— UX optimization client</p>
+          </article>
+          <article class="card">
+            <p class="quote">"I was skeptical about custom builds. Worth every penny. No regrets."</p>
+            <p class="tiny muted">— Creator workstation</p>
+          </article>
+          <article class="card">
+            <p class="quote">"He didn't just fix it—he taught me how to avoid the problem next time."</p>
+            <p class="tiny muted">— Troubleshooting client</p>
+          </article>
+        </div>
+
+        <p class="tiny muted" style="margin-top: 24px; text-align: center;">
+          Want to leave your review? <a href="contact.html">Get in touch</a> and we'll connect you with Google Reviews.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p class="tiny muted">© <span id="year"></span> Howard Resource Group • Dawsonville, GA</p>
+      <p class="tiny muted">Custom Gaming PCs • Workstation Builds • Professional Systems</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
