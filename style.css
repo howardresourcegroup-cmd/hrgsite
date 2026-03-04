@@ -53,14 +53,25 @@ a:hover{opacity:.92}
 
 .brand{display:flex; gap:12px; align-items:center}
 .brand__mark{
-  width:42px;height:42px;border-radius:14px;
+  width:42px;height:42px;border-radius:4px;
   display:grid;place-items:center;
-  background: linear-gradient(135deg, rgba(124,247,255,.20), rgba(167,139,250,.18));
+  background: var(--accent2);
+  color: var(--bg);
   border:1px solid var(--line);
   box-shadow: var(--shadow);
   font-weight:800;
   letter-spacing:.6px;
 }
+
+.topbar{
+  background: var(--panel);
+  color: var(--muted);
+  font-size:13px;
+  text-align:center;
+  padding:4px 0;
+}
+.topbar a{color:var(--accent);text-decoration:none;}
+.topbar a:hover{text-decoration:underline;}
 .brand__name{display:block; font-weight:800}
 .brand__tag{display:block; font-size:12px; color:var(--muted)}
 
@@ -134,7 +145,7 @@ em {
 
 .hero{
   position:relative;
-  padding: 120px 0 80px;
+  padding: 140px 0 100px;
   overflow:hidden;
 }
 .hero::before{
@@ -177,7 +188,7 @@ em {
 .hero__grid{
   display:grid;
   grid-template-columns: 1.2fr .9fr;
-  gap: 22px;
+  gap: 60px;
   align-items:start;
   position: relative;
   z-index: 1;
@@ -211,9 +222,9 @@ em {
 
 .cta{
   display:flex;
-  gap:12px;
+  gap:16px;
   flex-wrap:wrap;
-  margin: 18px 0 24px;
+  margin: 28px 0 40px;
 }
 
 .trust{
@@ -232,7 +243,7 @@ em {
 .trust__small{display:block; font-size:12px; color:var(--muted); margin-top: 2px}
 
 .section {
-  padding: 60px 0;
+  padding: 100px 0;
   position: relative;
 }
 
@@ -250,13 +261,13 @@ em {
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
-.section__head{margin-bottom: 24px}
+.section__head{margin-bottom: 48px}
 .section__head h2{margin:0 0 6px}
 .section__head p{margin: 0}
 
 .muted{color:var(--muted)}
 
-.grid{display:grid; gap:18px}
+.grid{display:grid; gap:32px}
 .cards{grid-template-columns: repeat(3, minmax(0, 1fr))}
 
 .card{
@@ -453,7 +464,7 @@ input:focus, textarea:focus, select:focus{
 .contact{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 60px;
   align-items:start;
 }
 .contact h2{margin-bottom: 8px}
