@@ -82,6 +82,7 @@ a:hover{opacity:.92}
 .nav a:hover::after{width:100%;}
 
 .nav a.active{color:var(--text);}
+.nav a.active::after{width:100%;}
 
 
 .btn{

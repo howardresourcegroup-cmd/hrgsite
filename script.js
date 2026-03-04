@@ -37,6 +37,18 @@ function setupFormFeedback(formId, statusId) {
 setupFormFeedback("quickForm", "formStatus");
 setupFormFeedback("contactForm", "contactStatus");
 
+// Highlight active page in navigation
+(function(){
+  const links = document.querySelectorAll('.nav a');
+  const path = window.location.pathname.split('/').pop();
+  links.forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === path || (href === 'index.html' && path === '')) {
+      a.classList.add('active');
+    }
+  });
+})();
+
 // Smooth scroll for anchor links (progressive enhancement)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
