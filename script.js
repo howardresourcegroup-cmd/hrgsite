@@ -90,12 +90,20 @@ if (tabButtons.length) {
   if(!start || !container) return;
 
   const steps = Array.from(container.querySelectorAll('.survey-step'));
+  const totalSteps = steps.length;
   let index = 0;
 
+  const updateProgress = i => {
+    const percent = ((i + 1) / totalSteps) * 100;
+    document.getElementById('progressFill').style.width = percent + '%';
+    document.getElementById('progressText').textContent = `Step ${i + 1} of ${totalSteps}`;
+  };
+
   const showStep = i => {
-    steps.forEach((s,idx)=> s.classList.toggle('hidden', idx!==i));
-    document.getElementById('surveyBack').style.display = i>0 ? 'inline-flex' : 'none';
-    document.getElementById('surveyNext').style.display = i < steps.length-1 ? 'inline-flex' : 'none';
+    steps.forEach((s, idx) => s.classList.toggle('hidden', idx !== i));
+    document.getElementById('surveyBack').style.display = i > 0 ? 'inline-flex' : 'none';
+    document.getElementById('surveyNext').style.display = i < steps.length - 1 ? 'inline-flex' : 'none';
+    updateProgress(i);
   };
 
   start.addEventListener('click', () => {
@@ -105,11 +113,11 @@ if (tabButtons.length) {
   });
 
   document.getElementById('surveyNext').addEventListener('click', () => {
-    if(index < steps.length-1){ index++; showStep(index); }
+    if(index < steps.length - 1){ index++; showStep(index); }
   });
+  
   document.getElementById('surveyBack').addEventListener('click', () => {
-    if(index>0){ index--; showStep(index); }
+    if(index > 0){ index--; showStep(index); }
   });
-
 })();
 

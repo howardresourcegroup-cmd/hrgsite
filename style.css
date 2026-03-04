@@ -521,7 +521,144 @@ body::after{
   opacity:.03;
 }
 
-@media (max-width: 768px){
+/* SURVEY STYLES */
+.survey {
+  background: var(--panel2);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.survey-header {
+  margin-bottom: 32px;
+}
+
+.survey-header h3 {
+  margin: 0 0 16px;
+}
+
+.survey-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--panel);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 20%;
+  transition: width 0.3s ease-out;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.survey-step {
+  animation: slideUp 0.3s ease-out;
+}
+
+.survey-step h4 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+.survey-step.hidden {
+  display: none;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(90,200,250,0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.radio-label:hover {
+  background: rgba(90,200,250,0.12);
+  border-color: var(--accent);
+}
+
+.radio-label input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.survey input[type="text"],
+.survey input[type="email"],
+.survey select,
+.survey textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.survey input[type="text"]:focus,
+.survey input[type="email"]:focus,
+.survey select:focus,
+.survey textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(90,200,250,0.1);
+}
+
+.survey-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
   h1{font-size: 36px}
   h2{font-size: 28px}
   
