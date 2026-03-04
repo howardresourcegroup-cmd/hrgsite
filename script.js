@@ -50,3 +50,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Tabs logic for products section
+const tabButtons = document.querySelectorAll('.tab-btn');
+if (tabButtons.length) {
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const active = document.querySelector('.tab-btn.active');
+      if (active) active.classList.remove('active');
+      btn.classList.add('active');
+
+      const current = document.querySelector('.tab-content:not(.hidden)');
+      if (current) current.classList.add('hidden');
+
+      const targetId = btn.dataset.target;
+      const panel = document.getElementById(targetId);
+      if (panel) panel.classList.remove('hidden');
+    });
+  });
+}

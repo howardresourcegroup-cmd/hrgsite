@@ -154,10 +154,16 @@
       <div class="container">
         <div class="section__head">
           <h2>Custom PCs for Every Need</h2>
-          <p class="muted">Handcrafted systems with premium components. Built to perform.</p>
+          <p class="muted">Handcrafted systems with premium components. Use the tabs below to explore.</p>
         </div>
 
-        <div class="grid cards">
+        <div class="tabs">
+          <button class="tab-btn active" data-target="gaming">Gaming</button>
+          <button class="tab-btn" data-target="workstation">Workstation</button>
+          <button class="tab-btn" data-target="professional">Professional</button>
+        </div>
+
+        <div class="tab-content" id="gaming">
           <article class="card card--highlight">
             <h3>🎮 Gaming PCs</h3>
             <p class="muted">Dominate your games with high-end GPUs, fast CPUs, and liquid cooling for maximum performance.</p>
@@ -173,7 +179,9 @@
               </ul>
             </div>
           </article>
+        </div>
 
+        <div class="tab-content hidden" id="workstation">
           <article class="card">
             <h3>💼 Workstation PCs</h3>
             <p class="muted">Perfect for creators, developers, and content makers. Multitask like a pro with workstation-grade components.</p>
@@ -189,7 +197,9 @@
               </ul>
             </div>
           </article>
+        </div>
 
+        <div class="tab-content hidden" id="professional">
           <article class="card">
             <h3>🏢 Professional Systems</h3>
             <p class="muted">Reliable, secure systems for business use. Built for productivity, security, and longevity.</p>
